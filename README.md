@@ -8,9 +8,18 @@ It's composed only of 3 routes for testing purposes.
 - Get user by ID (Auth protected)
 - Authenticate
 
-Remember to set a `JWT_SECRET` in the `.env`
+First of all don't forget to install all the `package.json` dependencies.
 
-The project is configured to run with Prisma alongside SQLite so in the `.env` add the following to configure the proper file path:
+```bash
+yarn
+# OR
+npm install
+```
+
+Set a `JWT_SECRET` in the `.env` file
+
+The project is configured to run with Prisma alongside SQLite so in the `.env` add the following to configure the database.  
+Or if you feel fancy, just setup any database you want and change the `schema.prisma` file db provider with the correct credentials.
 
 ```env
 DATABASE_URL="file:./dev.db"
