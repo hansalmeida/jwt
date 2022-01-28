@@ -6,8 +6,6 @@ import { ensureAuthentication } from "./middleware/ensureAuthentication"
 
 export const routes = Router()
 
-routes.get("/", (request, response) => response.json({ message: "Hello World" }))
-
 routes.post("/authenticate", new AuthenticateController().handle)
 
 routes.get("/users/:id", ensureAuthentication, new GetUserController().handle)
