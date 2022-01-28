@@ -1,5 +1,4 @@
 import { prismaClient } from "../../prisma"
-import crypto from "crypto"
 import { hashPassword } from "../utils/hashPassword"
 
 type IData = {
